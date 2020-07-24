@@ -1,13 +1,18 @@
-const mongoose = require('mongoose');
 
-const userSchema = mongoose.Schema({
-  Index_No.: { type: Number, required: true },
-  Name: { type: String, required: true },
-  Email: { type: String, required: true },
-  Contact_No.: { type: Number, required: true },
-  Date_created: { type: Number, required: true },
-  List_of_products:{type: Number, required: true},
-  Budget:{type: Number, required: true}
-});
+  var mongoose = require('mongoose');
+  var Schema = mongoose.Schema;
 
-module.exports = mongoose.model('Thing', userSchema);
+  var blogSchema = new Schema({ 
+    Index_No: Number,
+    Name:  String,
+    Email: String,
+    Contact_No: Number,
+    date_created: { type: Date, default: Date.now },
+    list: {type: Number, default:[]}
+    Budget: Number
+  });
+  var Blog = mongoose.model('User Data', blogSchema);
+
+  module.exports=Blog;// i need this page in data
+
+ 
