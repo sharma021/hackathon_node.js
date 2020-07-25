@@ -11,3 +11,6 @@ The project involves the following tasks:
 6. package.json : the file contains json format of the user data.
 7. config.js file was created to configure the changes made,
 8. auth.js : check for the login status
+
+E-Commerce: branch-phase2
+Use of APIs, modules like express, bycrypt,moongoose.
